@@ -1,0 +1,96 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at center, #1f1f2e, #0f0f1a);
+  font-family: 'Orbitron', sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  background: linear-gradient(135deg, #1f1f2e, #0f0f1a);
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+  border: 1px solid #00ffff;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+  color: #00ffff;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px; /* Ensures consistent button size */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+main .left .review:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+main .right {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  overflow: auto;
+  border: 1px solid #00ffff;
+}
+
+/* Modern Loader with enhanced neon effect */
+.loader {
+  border: 3px solid rgba(0, 255, 255, 0.3);
+  border-top: 3px solid #ff00ff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.6);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
